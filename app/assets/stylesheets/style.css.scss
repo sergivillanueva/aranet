@@ -1848,14 +1848,14 @@ footer p {
 /* 	19. PARALLAX
 /*-----------------------------------------------------------------------------------*/
 .parallax {
-    background: asset-url("furgoneta-limpieza.jpg") fixed no-repeat center center;
+    background: asset-url("furgoneta-limpieza-badalona.jpg") fixed no-repeat center center;
     background-size: cover;
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 .parallax1 {
-    background-image: asset-url("furgoneta-limpieza.jpg");
+    background-image: asset-url("furgoneta-limpieza-badalona.jpg");
 }
 .parallax2 {
     //background-image: asset-url("furgoneta-limpieza.jpg");
