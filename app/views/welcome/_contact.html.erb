@@ -18,64 +18,13 @@
           </ul>
           <div class="space30"></div>
           <div class="form-container">
-            <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate>
-              <div class="row">
-                <div class="col-sm-6 pr-10">
-                  <div class="form-field">
-                    <label>Nombre*
-                      <input type="text" name="name" required="required">
-                    </label>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column -->
-                <div class="col-sm-6 pl-10">
-                  <div class="form-field">
-                    <label>Correo electrónico*
-                      <input type="email" name="email" required="required">
-                    </label>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column -->
-                <div class="col-sm-6 pr-10">
-                  <div class="form-field">
-                    <label>Asunto
-                      <input type="text" name="subject">
-                    </label>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column -->
-                <div class="col-sm-6 pl-10">
-                  <div class="form-field">
-                    <label>Teléfono
-                      <input type="tel" name="tel">
-                    </label>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column -->
-                
-                <div class="col-sm-12">
-                  <div class="form-field">
-                    <label>Mensaje
-                      <textarea name="message" required></textarea>
-                    </label>
-                    <div class="text-center">
-                      <input type="submit" class="btn" value="Enviar" data-error="Revisa los errores" data-processing="Enviando..." data-success="Gracias! Te contactaremos en breve.">
-                    </div>
-                    <footer class="notification-box"></footer>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column --> 
-                
-              </div>
-              <!--/.row -->
-              
-            </form>
-            <!--/.vanilla-form --> 
+            <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
+            <%= render 'contact_form' %>
           </div>
           <!--/.form-container --> 
           

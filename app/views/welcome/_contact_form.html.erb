@@ -1,0 +1,25 @@
+<%= simple_form_for @contact, html: { class: "vanilla vanilla-form" } do |f| %>
+  <div class="row">
+    <div class="col-sm-6 pr-10">
+      <%= f.input :name, :required => true, wrapper_html: { class: "form-field" } %>
+    </div>
+    <div class="col-sm-6 pl-10">
+      <%= f.input :email, :required => true, wrapper_html: { class: "form-field" } %>
+    </div>
+    <div class="col-sm-6 pr-10">
+      <%= f.input :subject, :required => true, wrapper_html: { class: "form-field" } %>
+    </div>
+    <div class="col-sm-6 pl-10">
+      <%= f.input :phone_number, :required => true, input_html: { type: 'tel' }, wrapper_html: { class: "form-field" } %>
+    </div>
+    <div class="col-sm-12">
+      <%= f.input :message, as: :text, :required => true, wrapper_html: { class: "form-field" } %>
+    </div>
+    <div class="hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= f.button :submit, 'Enviar', :class=> "btn", :"data-error" => "Revisa los errores", :"data-processing" => "Enviando...", :"data-success" => "Gracias! Te contactaremos en breve." %>
+  </div>
+<% end %>
