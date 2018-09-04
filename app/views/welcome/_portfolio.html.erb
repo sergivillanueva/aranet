@@ -1,0 +1,40 @@
+<section id="portfolio">
+  <div class="light-wrapper">
+    <div class="container inner">
+      <h2 class="section-title text-center">Nuestros trabajos</h2>
+      <p class="lead text-center">¡Explora los resultados de los últimos servicios que hemos realizado!</p>
+      <div class="space20"></div>
+      <div id="js-lightbox-filter" class="cbp-filter-container text-center">
+        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">Todos</div>
+        <div data-filter=".limpieza-comunidad-vecinos" class="cbp-filter-item">Limpieza Comunidad de Vecinos</div>
+        <div data-filter=".limpieza-hogar" class="cbp-filter-item">Limpieza del Hogar</div>
+        <div data-filter=".limpieza-garajes" class="cbp-filter-item">Limpieza de Garajes</div>
+        <div data-filter=".limpieza-oficinas" class="cbp-filter-item">Limpieza de Oficinas</div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="space20"></div>
+      <div id="js-grid-lightbox" class="cbp cbp-l-grid-inline light-gallery">
+        <% @images.each_with_index do |image, index| %>
+          <div class="cbp-item <%= image[:class] %>">
+            <a href="<%= asset_path(image[:filename]) %>" class="cbp-caption lgitem" data-sub-html="#caption<%= index + 1 %>">
+              <div class="cbp-caption-defaultWrap"> <img src="<%= asset_path(image[:filename]) %>" alt=""> </div>
+              <div class="cbp-caption-activeWrap">
+                <div class="cbp-l-caption-alignCenter">
+                  <div class="cbp-l-caption-body">
+                    <p><%= image[:caption] %></p>
+                  </div>
+                </div>
+              </div>
+              <div id="caption<%= index + 1 %>" class="hidden">
+                <p><%= image[:text] %></p>
+              </div>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.light-wrapper -->
+</section>
+<!-- /#portfolio -->
