@@ -48,3 +48,10 @@ a:focus {
 .parallax1 a, .parallax1 a:hover {
   color: white;
 }
+
+.lg-toolbar .lg-close {
+  font-family: Arial
+}
+.lg-toolbar .lg-close:after {
+  content: "x"
+}
