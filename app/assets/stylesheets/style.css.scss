@@ -1114,7 +1114,8 @@ a.cbp-caption {
 }
 .cbp-filter-item.cbp-filter-item-active,
 .cbp-filter-item:hover {
-    color: #303030;
+    /*color: #303030;*/
+    color: $blue;
 }
 .cbp-caption-activeWrap {
     background: none;
