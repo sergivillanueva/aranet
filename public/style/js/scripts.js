@@ -30,7 +30,7 @@ $(document).ready(function() {
     $('.onepage section:first-of-type').css(secondStyle);
 	
 	$(function() {
-	    $(document).on('click', '.onepage .navbar ul.navbar-nav a[href*=#]:not([href="#"]), .circle-progress a[href*=#]:not([href="#"])', function(event) {
+	    $(document).on('click', '.onepage .navbar ul.navbar-nav a[href*=#]:not([href="#"]), .circle-progress a[href*=#]:not([href="#"]), .services .lead a[href*=#]:not([href="#"])', function(event) {
 	        var $anchor = $(this);
 	        $('html, body').stop().animate({
 	            scrollTop: $($anchor.attr('href')).offset().top
