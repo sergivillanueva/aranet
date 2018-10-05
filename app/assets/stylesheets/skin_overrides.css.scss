@@ -63,6 +63,13 @@ a:focus {
 
 .btn {
   background: $blue;
+  border: 1px solid $blue;
+}
+
+.btn:hover {
+  color: $blue;
+  background: white;
+  border: 1px solid $blue;
 }
 
 .icon {
@@ -76,4 +83,8 @@ a:focus {
 
 .sub-footer img {
   vertical-align: bottom;
+}
+
+.contact-info i {
+  color: inherit;
 }
