@@ -1,19 +1,19 @@
 <%= simple_form_for @contact, html: { class: "vanilla vanilla-form" } do |f| %>
   <div class="row">
     <div class="col-sm-6 pr-10">
-      <%= f.input :name, :required => true, wrapper_html: { class: "form-field" } %>
+      <%= f.input :name, label: 'Nombre', :required => true, wrapper_html: { class: "form-field" } %>
     </div>
     <div class="col-sm-6 pl-10">
-      <%= f.input :email, :required => true, wrapper_html: { class: "form-field" } %>
+      <%= f.input :email, label: 'Correo electrónico', :required => true, wrapper_html: { class: "form-field" } %>
     </div>
     <div class="col-sm-6 pr-10">
-      <%= f.input :subject, :required => true, wrapper_html: { class: "form-field" } %>
+      <%= f.input :subject, label: 'Asunto', :required => true, wrapper_html: { class: "form-field" } %>
     </div>
     <div class="col-sm-6 pl-10">
-      <%= f.input :phone_number, :required => true, input_html: { type: 'tel' }, wrapper_html: { class: "form-field" } %>
+      <%= f.input :phone_number, label: 'Número de teléfono', :required => true, input_html: { type: 'tel' }, wrapper_html: { class: "form-field" } %>
     </div>
     <div class="col-sm-12">
-      <%= f.input :message, as: :text, :required => true, wrapper_html: { class: "form-field" } %>
+      <%= f.input :message, label: 'Tu consulta', as: :text, :required => true, wrapper_html: { class: "form-field" } %>
     </div>
     <div class="hidden">
       <%= f.input :nickname, :hint => 'Leave this field blank!' %>
