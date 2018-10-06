@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @contact = Contact.new
-    @images = (1..3).map do |i|
+    @images = (1..4).map do |i|
       {
         filename: "portfolio/limpieza-escalera-comunidad-vecinos-#{i}.jpg",
         caption: "Limpieza Comunidad de Vecinos",
