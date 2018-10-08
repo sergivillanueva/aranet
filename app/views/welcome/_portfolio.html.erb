@@ -17,7 +17,7 @@
         <% @images.each_with_index do |image, index| %>
           <div class="cbp-item <%= image[:class] %>">
             <a href="<%= asset_path(image[:filename]) %>" class="cbp-caption lgitem" data-sub-html="#caption<%= index + 1 %>">
-              <div class="cbp-caption-defaultWrap"> <img src="<%= asset_path(image[:filename]) %>" alt=""> </div>
+              <div class="cbp-caption-defaultWrap"> <img src="<%= asset_path(image[:preview]) %>" alt=""> </div>
               <div class="cbp-caption-activeWrap">
                 <div class="cbp-l-caption-alignCenter">
                   <div class="cbp-l-caption-body">
