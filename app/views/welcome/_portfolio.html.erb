@@ -1,4 +1,4 @@
-<section id="portfolio">
+<section id="portfolio" itemscope itemtype="https://schema.org/CollectionPage">
   <div class="light-wrapper">
     <div class="container inner">
       <h2 class="section-title text-center">Nuestros trabajos</h2>
@@ -16,8 +16,8 @@
       <div id="js-grid-lightbox" class="cbp cbp-l-grid-inline light-gallery">
         <% @images.each_with_index do |image, index| %>
           <div class="cbp-item <%= image[:class] %>">
-            <a href="<%= asset_path(image[:filename]) %>" alt="<%=image[:text]%>" class="cbp-caption lgitem" data-sub-html="#caption<%= index + 1 %>">
-              <div class="cbp-caption-defaultWrap"> <img src="<%= asset_path(image[:preview]) %>" alt="<%=image[:text]%>"> </div>
+            <a href="<%= asset_path(image[:filename]) %>" alt="<%=image[:text]%>" title="<%=image[:text]%>" class="cbp-caption lgitem" data-sub-html="#caption<%= index + 1 %>">
+              <div class="cbp-caption-defaultWrap"> <img src="<%= asset_path(image[:preview]) %>" alt="<%=image[:text]%>" title="<%=image[:text]%>"> </div>
               <div class="cbp-caption-activeWrap">
                 <div class="cbp-l-caption-alignCenter">
                   <div class="cbp-l-caption-body">
