@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
         text: "Limpieza de Garajes",
         class: "limpieza-garajes"
       }
-    end + (1..3).map do |i|
+    end + (1..5).map do |i|
       {
         preview: "portfolio/preview/limpieza-oficinas-#{i}.jpg",
         filename: "portfolio/limpieza-oficinas-#{i}.jpg",
